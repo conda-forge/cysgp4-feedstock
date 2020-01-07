@@ -1,6 +1,6 @@
 {% set name = "cysgp4" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "24bf9cdc2168c7fc6b6dd89a24849c09560b755d7268e97f6988c08aa09ff84e" %}
+{% set version = "0.3.1" %}
+{% set sha256 = "ee8fa7e89bb01aff209ce85cd48e6f575d14618f5d9e71e8cd3a7fcc04ea6188" %}
 
 package:
   name: {{ name|lower }}
