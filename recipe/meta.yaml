@@ -1,6 +1,6 @@
 {% set name = "cysgp4" %}
-{% set version = "0.3.3" %}
-{% set sha256 = "76c83ee090cd097248c18bbbebe6891288e9b8e6185292ab8e7893f3492aac66" %}
+{% set version = "0.3.4" %}
+{% set sha256 = "e0a94d4f3793caede40621e1f77f5e9f44ebff95ec2ce32429d65bbde150318b" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   skip: true  # [py27]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
