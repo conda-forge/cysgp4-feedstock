@@ -27,6 +27,7 @@ requirements:
     - setuptools
     - setuptools_scm
     - cython
+    - extension-helpers
     - numpy
 
   run:
