@@ -11,13 +11,14 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py27]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
 
   host:
     - compilers  # [osx]
@@ -35,7 +36,6 @@ requirements:
     - setuptools
     - compilers  # [osx]
     - llvm-openmp  # [osx]
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
