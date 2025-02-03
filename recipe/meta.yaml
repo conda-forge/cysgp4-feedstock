@@ -1,13 +1,13 @@
 {% set name = "cysgp4" %}
-{% set version = "0.3.6" %}
-{% set sha256 = "21406d04267093532fd9ed0c136409a69d13d4a62800fe2e5366e4ad9afd5522" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "bb38659db575bddd8aae30c8e1cb8060a278ac06f867b2bd18e1b4ce483d8182" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
 
   host:
     - compilers  # [osx]
