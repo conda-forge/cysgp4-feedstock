@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<=39]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -34,7 +34,9 @@ requirements:
   run:
     - python
     - numpy
-    - setuptools
+    # cysgp4/helpers.py imports pkg_resources at runtime, which setuptools
+    # no longer ships as of v81; pin to a version that still provides it.
+    - setuptools <81
     - compilers  # [osx]
     - llvm-openmp  # [osx]
 
